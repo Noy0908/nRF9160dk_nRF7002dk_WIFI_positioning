@@ -7,7 +7,7 @@
 /* Use high drive mode on SPI pins that handle communication with nRF7002
  * so that SCK frequency > 4 MHz can be used. */
  &spi3_default {
-	group1 {
+	group1 {	
 		nordic,drive-mode = <NRF_DRIVE_H0H1>;
 	};
 };
@@ -17,3 +17,9 @@
 &uart1 {
 	status = "disabled";
 };
+
+
+
+
+
+  

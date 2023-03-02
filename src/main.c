@@ -98,6 +98,8 @@ static void data_sample_timer_handler(struct k_timer *timer);
 /* Data fetching timeouts */
 #define DATA_FETCH_TIMEOUT_DEFAULT 2
 
+#define FW_VERSION					"1.2.2"
+
 K_MSGQ_DEFINE(msgq_app, sizeof(struct app_msg_data), APP_QUEUE_ENTRY_COUNT,
 	      APP_QUEUE_BYTE_ALIGNMENT);
 
@@ -543,6 +545,8 @@ void main(void)
 		LOG_ERR("Failed starting module, error: %d", err);
 		SEND_ERROR(app, APP_EVT_ERROR, err);
 	}
+
+	LOG_DBG("Asset tracker with wifi positioning, version is %s\r\n.", FW_VERSION);
 
 	while (true) {
 		module_get_next_msg(&self, &msg);

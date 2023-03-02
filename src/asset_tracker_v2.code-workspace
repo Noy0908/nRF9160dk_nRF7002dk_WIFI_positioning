@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"name": "asset_tracker_v2",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"nrf-connect.applications": [
+			"${workspaceFolder}"
+		],
+		"nrf-connect.topdir": "c:\\\\ncs\\\\v2.0.2",
+		"nrf-connect.toolchain.path": "${nrf-connect.toolchain:2.2.0}",
+		"nrf-connect.taskBindings": {
+			"flash": [
+				{
+					"taskName": "configure",
+					"buildConfigs": [
+						"${workspaceFolder}\\build_1"
+					]
+				}
+			]
+		}
+	}
+}
